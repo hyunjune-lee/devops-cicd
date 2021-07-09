@@ -1,0 +1,15 @@
+version: "2"
+services:
+  db:
+    container_name: my-mariadb
+    env_file:
+      - env.list
+    image: hylee42/cloudflask-db:v1.0.20
+    ports:
+      - "3306:3306"
+  app:
+    links:
+      - db
+    image: hylee42/cloudflask:v1.0.20
+    ports:
+      - "5000:5000"
