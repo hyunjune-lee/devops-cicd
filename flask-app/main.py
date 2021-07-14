@@ -1,12 +1,12 @@
 # third-party imports
 import pymysql
 from flask import jsonify, render_template, request, redirect
-from datetime import datetime
 
 # local imports
 from app import app
 from models import Results
 from db_config import mysql
+from datetime import datetime
 
 # route
 @app.route("/")
