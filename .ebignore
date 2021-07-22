@@ -1,0 +1,5 @@
+.git
+.gitignore
+/mariadb-container
+/aws_lightsail
+.env.list
