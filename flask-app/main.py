@@ -1,20 +1,20 @@
-# third-party imports
-import pymysql
-from flask import jsonify, render_template, request, redirect
+# # third-party imports
+# import pymysql
+# from flask import jsonify, render_template, request, redirect
 
-# local imports
-from app import app
-from models import Results
+# # local imports
+# from app import app
+# from models import Results
 
-# from db_config import mysql
-from datetime import datetime
+# # from db_config import mysql
+# from datetime import datetime
 
-# route
-@app.route("/")
-def index_page():
-    # daily_quizs = get_daily_quizs()
-    # return render_template("index.html", quizs=daily_quizs)
-    return render_template("index.html")
+# # route
+# @app.route("/")
+# def index_page():
+#     # daily_quizs = get_daily_quizs()
+#     # return render_template("index.html", quizs=daily_quizs)
+#     return render_template("index.html")
 
 
 # def get_daily_quizs():
@@ -134,17 +134,27 @@ def index_page():
 #         conn.close()
 
 
-@app.errorhandler(404)
-def not_found(error=None):
-    message = {
-        "status": 404,
-        "message": "Not Found: " + request.url,
-    }
-    res = jsonify(message)
-    res.state_code = 404
+# @app.errorhandler(404)
+# def not_found(error=None):
+#     message = {
+#         "status": 404,
+#         "message": "Not Found: " + request.url,
+#     }
+#     res = jsonify(message)
+#     res.state_code = 404
 
-    return res
+#     return res
+
+
+from flask import Flask, render_template
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def index():
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", PORT= 5000)
+    app.run(debug=True, host="0.0.0.0", port=5000)
