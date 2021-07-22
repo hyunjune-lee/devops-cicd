@@ -2,7 +2,7 @@
   "devops-flask": {
     "image": ":devops-flask-service.flask-container.1",
     "ports": {
-      "8000": "HTTP"
+      "5000": "HTTP"
     }
   }
 }
