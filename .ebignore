@@ -1,5 +1,6 @@
 .git
 .gitignore
-/mariadb-container
 /aws_lightsail
+/mariadb-container
 .env.list
+.docker-compose.yml
