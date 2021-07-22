@@ -11,8 +11,9 @@ from datetime import datetime
 # route
 @app.route("/")
 def index_page():
-    daily_quizs = get_daily_quizs()
-    return render_template("index.html", quizs=daily_quizs)
+    # daily_quizs = get_daily_quizs()
+    # return render_template("index.html", quizs=daily_quizs)
+    return render_template("index.html")
 
 
 def get_daily_quizs():
