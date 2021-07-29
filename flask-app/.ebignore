@@ -1,6 +1,6 @@
-../.git
-../.gitignore
-../aws_lightsail
-../mariadb-container
+.git
+.gitignore
+/aws_lightsail
+/mariadb-container
 .env.list
-../docker-compose.yml
+.docker-compose.yml
