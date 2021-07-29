@@ -6,7 +6,7 @@ from flask import jsonify, render_template, request, redirect
 from app import app
 from models import Results
 
-# from db_config import mysql
+from db_config import mysql
 from datetime import datetime
 
 # route
