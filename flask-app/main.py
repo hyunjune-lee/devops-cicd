@@ -5,7 +5,6 @@ from flask import jsonify, render_template, request, redirect
 # local imports
 from app import app
 from models import Results
-
 from db_config import mysql
 from datetime import datetime
 
@@ -14,7 +13,6 @@ from datetime import datetime
 def index_page():
     daily_quizs = get_daily_quizs()
     return render_template("index.html", quizs=daily_quizs)
-    # return render_template("index.html")
 
 
 def get_daily_quizs():
@@ -147,4 +145,4 @@ def not_found(error=None):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)
+    app.run(debug=True, host="0.0.0.0")
